@@ -1,0 +1,221 @@
+/* ==========================================================================
+   1. التحضيرات العامة (Reset & Basics)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* أسود عميق للموقع كاملاً */
+    color: #e0e0e0; /* رمادي فاتح جداً لسهولة القراءة */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. شريط التنقل (Navigation Bar)
+   ========================================================================== */
+.navbar {
+    background-color: #1a1a1a;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #FF8C00;
+    position: sticky; /* لجعل المنيو ثابتة عند التمرير */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #FF8C00;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF8C00;
+    transform: translateY(-2px);
+}
+
+.menu-icon {
+    display: none; /* تظهر فقط في الجوال عبر الميديا كويري بالأسفل */
+    font-size: 28px;
+    color: #FF8C00;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   3. العناوين والأزرار (Typography & Buttons)
+   ========================================================================== */
+h1, h2, h3 {
+    color: #FF8C00;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.submit-btn, .search-btn, .pe-btn-outline {
+    background-color: #FF8C00;
+    color: #000;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.submit-btn:hover, .search-btn:hover, .pe-btn-outline:hover {
+    background-color: #e67e00;
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.4);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   4. الهيكل العام والبطاقات (Layout & Cards)
+   ========================================================================== */
+section, .container, .confirmation-container {
+    margin: 40px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.info-card, .game-box, .booking-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.game-hover:hover, .info-card:hover {
+    transform: translateY(-8px);
+    border-color: #FF8C00;
+}
+
+/* ==========================================================================
+   5. نصوص وصفحة الألعاب (Events & Games)
+   ========================================================================== */
+.title-glow {
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+}
+
+.title-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #FF8C00;
+    margin: 10px auto 30px;
+    border-radius: 2px;
+}
+
+.excited-text {
+    color: #e0e0e0 !important;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 30px auto;
+}
+
+.pe-gallery-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px 0;
+    border: 1px solid #444;
+}
+
+/* ==========================================================================
+   6. النماذج والمدخلات (Forms)
+   ========================================================================== */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #FF8C00;
+    box-shadow: 0 0 5px rgba(255, 140, 0, 0.3);
+}
+
+/* ==========================================================================
+   7. التذييل (Footer)
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1a1a1a !important;
+    color: #888;
+    margin-top: 60px;
+    border-top: 2px solid #FF8C00;
+}
+
+/* ==========================================================================
+   8. التجاوب مع الشاشات (Responsive Design)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* تظهر أيقونة الجوال */
+    }
+
+    .nav-links {
+        display: none; /* تختفي الروابط لتظهر عبر JS */
+        flex-direction: column;
+        width: 100%;
+        background-color: #1a1a1a;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        padding: 20px;
+        border-bottom: 2px solid #FF8C00;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr; /* كارت واحد في الصف للجوال */
+    }
+
+    .title-glow {
+        font-size: 2rem;
+    }
+}

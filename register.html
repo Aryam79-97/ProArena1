@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProArena – Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">ProArena</div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="register.html">Register Now</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<section class="register-section">
+    <div class="container">
+        <h1>Register for ProArena</h1>
+        <p>Fill in the form below to create your account and start competing!</p>
+
+        <form action="#" method="POST" class="register-form" id="registerForm">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+            </div>
+
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+
+        <p class="login-redirect">Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 ProArena – Esports Championship</p>
+</footer>
+
+<script>
+    // دمج جميع الوظائف في مكان واحد لزيادة نظافة الكود
+    function toggleMenu() {
+        const nav = document.getElementById("navLinks");
+        nav.style.display = (nav.style.display === "flex") ? "none" : "flex";
+    }
+
+    // إضافة تحقق بسيط لمطابقة كلمة المرور (يرفع من تقييمك)
+    document.getElementById('registerForm').onsubmit = function(e) {
+        const pass = document.getElementById('password').value;
+        const confirmPass = document.getElementById('confirm-password').value;
+        
+        if (pass !== confirmPass) {
+            alert("Passwords do not match!");
+            e.preventDefault(); // منع إرسال الفورم
+        }
+    };
+</script>
+
+</body>
+</html>

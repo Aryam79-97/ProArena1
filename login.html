@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProArena – Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">ProArena</div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="register.html">Register Now</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<section class="register-section">
+    <div class="container">
+        <h1>Login</h1>
+        <p>Welcome back! Please login to your account.</p>
+
+        <form action="index.html" method="GET" class="register-form">
+            <div class="form-group">
+                <label for="username">Username or Email</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+
+            <button type="submit" class="submit-btn">Login Now</button>
+        </form>
+
+        <p class="login-redirect">Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 ProArena – Esports Championship</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById("navLinks");
+        nav.style.display = (nav.style.display === "flex") ? "none" : "flex";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProArena – Book Your Esports Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">ProArena</div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="register.html">Register Now</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<section class="welcome-section">
+    <h1>Welcome to ProArena</h1>
+    <p>The official platform for the Esports Championship 2026! Register as a player, choose your favorite game, check the tournament schedule, and secure your spot before it's gone!</p>
+    <p>Compete for the title of Best Player of 2026. Whether you're a shooter, strategist, or competitive gamer, this is your chance to shine and challenge the best!</p>
+
+    <div class="search-container">
+        <input type="text" id="search-events" placeholder="Search events..." />
+        <button class="search-btn" onclick="searchEvents()">Search</button>
+    </div>
+</section>
+
+<section class="about-us">
+    <h2>About ProArena</h2>
+    
+    <div class="info-card">
+        <h3>What is ProArena?</h3>
+        <p>ProArena is a competitive esports platform created for players who want to participate in organized tournaments. It provides a smooth registration process, scheduled matches, and a professional environment for gamers.</p>
+    </div>
+
+    <div class="info-card">
+        <h3>Event Goals</h3>
+        <ul class="goals-list">
+            <li>Enhance students' gaming and strategic skills.</li>
+            <li>Encourage positive and fair competition.</li>
+            <li>Provide a realistic experience for booking and participating in esports tournaments.</li>
+            <li>Promote teamwork, discipline, and responsibility.</li>
+        </ul>
+    </div>
+
+    <div class="info-card">
+        <h3>Event Organizers</h3>
+        <p>
+            The ProArena esports event is organized by:
+            <br>• University of Tabuk  
+            <br>• College of Computers and Information Technology  
+            <br>• Department of Computer Science  
+            <br>• Students of the Advanced Web Technology course
+        </p>
+    </div>
+
+    <div class="info-card">
+        <h3>Vision & Mission</h3>
+        <p>
+            <strong>Vision:</strong> To build a professional and motivating competitive environment for students.  
+            <br><br>
+            <strong>Mission:</strong> To provide a digital platform that makes participating in official esports tournaments simple, organized, and accessible.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 ProArena – Esports Championship</p>
+</footer>
+
+<script>
+    function searchEvents() {
+        let query = document.getElementById('search-events').value;
+        window.location.href = `events.html?search=${encodeURIComponent(query)}`;
+    }
+
+    function toggleMenu() {
+        const nav = document.getElementById("navLinks");
+        nav.style.display = (nav.style.display === "flex") ? "none" : "flex";
+    }
+</script>
+
+</body>
+</html>
