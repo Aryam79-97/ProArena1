@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProArena – Events & Tournaments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">ProArena</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="register.html">Register Now</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<div class="confirmation-container page-animate">
+    <h1 class="title-glow">Let's go</h1>
+    <div class="title-divider"></div>
+
+    <div class="booking-card card-shadow soft-zoom">
+        <div class="arena-heading">
+            <h2>Ready for the Challenge?</h2>
+            <p class="excited-text">
+                Are you excited? The arena awaits your skills, your strategy, and your victory! 
+            </p>
+        </div>
+    </div>
+
+    <h2 class="games-title">Selected Game Categories</h2>
+
+    <div class="games-grid">
+        <div class="game-box game-hover card-shadow">
+            <h3>FIFA</h3>
+            <article class="pe-card">
+                <div class="pe-card-body">
+                    <h2 class="pe-card-title">FIFA Tournament</h2>
+                    <p class="pe-card-desc">Knockout-style football tournament with 32 players.</p>
+                </div>
+                <div class="pe-details">
+                    <p><strong>Players:</strong> 32 | <strong>Match:</strong> 10 min</p>
+                    <p><strong>Prize:</strong> 500 SAR</p>
+                    <img src="images/fifaa.png" alt="FIFA" class="pe-gallery-img">
+                    <a href="register.html" class="pe-btn-outline">Register Now</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="game-box game-hover card-shadow">
+            <h3>Fortnite</h3>
+            <article class="pe-card">
+                <div class="pe-card-body">
+                    <h2 class="pe-card-title">Battle Royale</h2>
+                    <p class="pe-card-desc">100 players per round. Last one standing wins.</p>
+                </div>
+                <div class="pe-details">
+                    <p><strong>Players:</strong> 100 | <strong>Prize:</strong> 700 SAR</p>
+                    <img src="images/fort.jpg" alt="Fortnite" class="pe-gallery-img">
+                    <a href="register.html" class="pe-btn-outline">Register Now</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="game-box game-hover card-shadow">
+            <h3>PUBG</h3>
+            <article class="pe-card">
+                <div class="pe-card-body">
+                    <h2 class="pe-card-title">PUBG Survival</h2>
+                    <p class="pe-card-desc">Tactical survival battle royale. Squads of 4.</p>
+                </div>
+                <div class="pe-details">
+                    <p><strong>Players:</strong> 64 | <strong>Prize:</strong> 1000 SAR</p>
+                    <img src="images/pubg.png" alt="PUBG" class="pe-gallery-img">
+                    <a href="register.html" class="pe-btn-outline">Register Now</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="game-box game-hover card-shadow">
+            <h3>Rocket League</h3>
+            <article class="pe-card">
+                <div class="pe-card-body">
+                    <h2 class="pe-card-title">RL Championship</h2>
+                    <p class="pe-card-desc">Fast-paced 3v3 matches. Car football madness.</p>
+                </div>
+                <div class="pe-details">
+                    <p><strong>Players:</strong> 24 | <strong>Prize:</strong> 600 SAR</p>
+                    <img src="images/Rocket.png" alt="Rocket League" class="pe-gallery-img">
+                    <a href="register.html" class="pe-btn-outline">Register Now</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 ProArena – Esports Championship</p>
+</footer>
+
+<script>
+// دمج كافة السكريبتات لضمان نظافة الكود
+function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.style.display = (nav.style.display === "flex") ? "none" : "flex";
+}
+
+// سكريبت إضافي لتحسين تجربة المستخدم عند البحث
+const urlParams = new URLSearchParams(window.location.search);
+const searchQuery = urlParams.get('search');
+if (searchQuery) {
+    console.log("Searching for: " + searchQuery);
+    // يمكنك إضافة كود هنا لفلترة الألعاب بناءً على البحث
+}
+</script>
+
+</body>
+</html>
